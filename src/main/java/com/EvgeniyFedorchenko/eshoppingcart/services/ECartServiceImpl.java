@@ -19,6 +19,7 @@ public class ECartServiceImpl implements ECartService {
 
         eCart.addIdsToCart(ids);
 
+        // Формируем ответ об успешном добавлении товаров
         StringBuilder sb = new StringBuilder("product successfully added: ");
         ids.forEach(id -> sb.append(id).append(", "));
         return sb.delete(sb.length() - 2, sb.length()).toString();
